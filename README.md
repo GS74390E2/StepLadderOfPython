@@ -6,7 +6,6 @@
 ## 宗旨
 
 个人Python学习过程中的整理沉淀
-> [知识点记录](http://naotu.baidu.com/home)
 > 相关代码见code
 
 ### 目录
