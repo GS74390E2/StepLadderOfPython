@@ -16,6 +16,7 @@ print(n1.x)
 print(n2.y)
 # 显示所有字段
 print(n1._fields)
+# 元组本身不可变，可以使用_replace方法来生成一个新元组
 # 可以转化为collections.orderedDict
 point = (3, 4)
 coordinate = n1._make(point)
