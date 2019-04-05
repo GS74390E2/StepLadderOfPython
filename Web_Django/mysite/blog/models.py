@@ -1,8 +1,16 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
+
+
+class PublishedManage(models.Manager):
+	"""管理器类"""
+	def get_queryset(self):
+		"""get_queryset()会返回执行过的查询集"""
+		return super(PublishedManage, self).get_queryset().filter(status='published')
 
 
 class Post(models.Model):
@@ -40,3 +48,16 @@ class Post(models.Model):
 	
 	def __str__(self):
 		return self.title
+
+	# 添加管理器, 否则为默认的objects
+	objects = models.Manager()
+	published = PublishedManage()
+
+	def get_absolute_url(self):
+		"""返回一个标准url"""
+		return reverse('blog:post_detail', args=[
+			self.publish.year,
+			self.publish.strftime('%m'),
+			self.publish.strftime('%d'),
+			self.slug])
+
