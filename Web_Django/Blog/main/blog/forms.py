@@ -19,3 +19,9 @@ class CommentForm(forms.ModelForm):
 		# 指定模型类来构建表单
 		model = Comment
 		fields = ("name", "email", "body")
+
+
+class SearchForm(forms.Form):
+	"""搜索表单"""
+	query = forms.CharField()
+
