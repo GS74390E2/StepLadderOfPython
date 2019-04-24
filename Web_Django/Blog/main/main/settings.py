@@ -35,10 +35,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',  # session框架
     'django.contrib.messages',  # 消息框架
     'django.contrib.staticfiles',  # 管理静态文件
+<<<<<<< HEAD
     'blog',
     'taggit',  # 标签
     'django.contrib.sites',  # 站点地图
     'django.contrib.sitemaps',
+=======
+	'blog',
+	'taggit',  # 标签
+	'django.contrib.sites',  # 站点地图
+	'django.contrib.sitemaps',
+	'haystack',  # 搜索引擎引入
+>>>>>>> ae440994551330e4d28ddb948a25f6d8eb5f5f28
 ]
 
 MIDDLEWARE = [
@@ -125,3 +133,16 @@ EMAIL_PORT = 25
 EMAIL_HOST_PASSWORD = "jiuwei123"
 EMAIL_HOST_USER = "gjybui@163.com"
 EMAIL_USE_TLS = True
+<<<<<<< HEAD
+=======
+
+
+# 搜索引擎后端
+HAYSTACK_CONNECTIONS = {
+	'default': {
+		'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+		'URL': 'http://192.168.0.77:8983/solr/blog',
+	},
+}
+
+>>>>>>> ae440994551330e4d28ddb948a25f6d8eb5f5f28
