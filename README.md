@@ -11,7 +11,7 @@
 ### 目录
 
 - 
-- [数据结构与算法库] code/DS_A
+- [数据结构与算法库] http://naotu.baidu.com/home
 - [面向对象及魔法方法] code/OOP
 - [并发库] code/Concurrent
 - [网络编程库] code/Net

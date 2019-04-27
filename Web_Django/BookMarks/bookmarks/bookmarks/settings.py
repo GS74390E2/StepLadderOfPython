@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'images',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,13 @@ LOGOUT_URL = reverse_lazy("account:logout")
 
 # 邮件
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# photo
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+
+# auth
+AUTHENTICATION_BACKENDS = (
+	"django.contrib.auth.backends.ModelBackend",
+	"account.authentication.EmailAuthBackend",
+)
